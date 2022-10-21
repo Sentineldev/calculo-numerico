@@ -12,6 +12,8 @@ def existe_valor_intermedio(f, x: float, y: float) -> bool:
     donde si el producto, de evaluar ambos valores en esa funcion
     es < 0 existe un valor p  en el intervalo, tal que f(p) es = 0.
 
+    return : bool
+
     """
 
     return (f(x) * f(y)) < 0    
@@ -19,13 +21,15 @@ def existe_valor_intermedio(f, x: float, y: float) -> bool:
 
 
 
-def es_numero_raiz(f,x):
+def es_numero_raiz(f,x) -> bool:
 
     """
     Se evalua si el valor dado 
     evaluado en la funcion
     es raiz de de la funcion.
     
+    return : bool
+
     """
 
     return f(x) == 0
