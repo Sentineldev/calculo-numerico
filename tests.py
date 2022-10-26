@@ -27,6 +27,14 @@ class TestErrores(unittest.TestCase):
         self.assertEqual(errores.error_relativo(1,5),0.2)
 
 
+
+    #Valida que se alerte sobre una division entre 0.
+    def test_exceptions(self):
+
+        with self.assertRaises(ZeroDivisionError):
+            errores.error_relativo(1,0)
+
+
 class TestTeoremas(unittest.TestCase):
     
 
