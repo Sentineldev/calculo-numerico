@@ -32,7 +32,7 @@ def es_numero_raiz(f,x) -> bool:
 
     """
 
-    return f(x) == 0
+    return f(x) is 0
 
 
 if __name__ == "__main__":

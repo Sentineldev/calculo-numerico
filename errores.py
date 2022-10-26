@@ -23,12 +23,16 @@ def error_relativo(error_absoluto: float,valor_real : float) ->  float:
     Calcula el error relativo, mediante una division del error absoluto
     entre el valor real, retornando el valor absoluto de esa division.
 
+    El parametro 'valor_real' no puede ser 0.
+
     return: float
     
     """
 
-
-    return abs(error_absoluto/valor_real)
+    if valor_real == 0:
+        raise ZeroDivisionError("Cannot divide by 0")
+    else:
+        return abs(error_absoluto/valor_real)
 
 
 
