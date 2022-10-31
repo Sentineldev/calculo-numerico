@@ -3,12 +3,15 @@
 
 #standart imports
 import unittest
+import math
 
 
 #local imports
 
 import errores
 import teoremas
+
+import biseccion
 
 
 
@@ -68,7 +71,21 @@ class TestTeoremas(unittest.TestCase):
 
 
 
+class TestBiseccion(unittest.TestCase):
+    
 
+    def test_biseccion(self):
+        func = lambda x :math.exp(-x)-math.log(x)
+
+        intervalo = (1,1.5)
+        error_relativo = 1
+        N = 12
+        self.assertEqual(biseccion.biseccion(
+            func,
+            intervalo,
+            error_relativo,
+            N
+        ),(7, 0.5988023952095809))
 
 
 
